@@ -37,6 +37,9 @@ public class MainVM extends BaseVM {
         callApiToGetKeywords();
     }
 
+    /**
+     * Calls api to get the list of keyword names.
+     */
     private void callApiToGetKeywords() {
         Disposable disposable = ApiManager.apis().getKeywordNames()
                 .flatMap((Function<List<String>, Observable<List<IKeyword>>>) HotKeyword::convertNamesToKeywords)
@@ -45,10 +48,20 @@ public class MainVM extends BaseVM {
         compositeDisposable.add(disposable);
     }
 
+    /**
+     * Gets the keyword adapter
+     *
+     * @return the keyword adapter
+     */
     public KeywordAdapter getKeywordAdapter() {
         return keywordAdapter;
     }
 
+    /**
+     * Gets the layout manager.
+     *
+     * @return the layout manager.
+     */
     public RecyclerView.LayoutManager getLayoutManager() {
         return new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false);
     }
