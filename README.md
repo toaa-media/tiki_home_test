@@ -15,3 +15,10 @@ This is an answer application for assignment of TIKI Home Test
 - Use RxJava2 and RxAndroid
 - User Retrofit to communicate with API
 - Support Java 8 with Lamda
+
+## Libraries
+
+- [RxJava2](https://github.com/ReactiveX/RxJava)
+- [RxAndroid](https://github.com/ReactiveX/RxAndroid)
+- [Retrofit](https://github.com/square/retrofit)
+- [Gson](https://github.com/google/gson)
